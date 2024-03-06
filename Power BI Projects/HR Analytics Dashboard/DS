@@ -1,1 +1,14 @@
-
+# This are im creating Measures......
+## % Due for Promotion = DIVIDE([Due for Promotion],[Total Emp],0)
+## % Female = DIVIDE([Female],[Total Emp],0)
+## % Male = DIVIDE([Male],[Total Emp],0)
+## % Not Due = DIVIDE([Not Due],[Total Emp],0)
+## % On Services = DIVIDE([On Services],[Total Emp],0)
+## % Will be Retreanched = DIVIDE([Will be Retreanched],[Total Emp],0)
+## Due for Promotion = IF(ISBLANK(CALCULATE([Total Emp],'HR Analytics Data'[Promotion Status] = "due for promotion")),0,CALCULATE([Total Emp],'HR Analytics Data'[Promotion Status] = "due for promotion"))
+## Female = CALCULATE([Total Emp],'HR Analytics Data'[Gender] = "female")
+## Male = CALCULATE([Total Emp],'HR Analytics Data'[Gender] = "male")
+## Not Due = CALCULATE([Total Emp],'HR Analytics Data'[Promotion Status] = "not due")
+## On Services = CALCULATE([Total Emp],'HR Analytics Data'[Retreanchment Status] = "On Services")
+## Total Emp = COUNTROWS('HR Analytics Data')
+## Will be Retreanched = IF(ISBLANK(CALCULATE([Total Emp],'HR Analytics Data'[Retreanchment Status] = "Will be Retreanched")),0,CALCULATE([Total Emp],'HR Analytics Data'[Retreanchment Status] = "Will be Retreanched"))
